@@ -1,0 +1,165 @@
+/* variables */
+
+:root {
+  --clr-violet: hsl(257, 40%, 49%);
+  --clr-magenta: hsl(300, 69%, 71%);
+  
+  --ff-poppins: "Poppins", sans-serif;
+  --ff-open_sans: "Open Sans", sans-serif;
+
+  --fw-regular: 400;
+  --fw-bold: 600;
+}
+
+/* resets */
+
+html,
+body {
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img,
+picture,
+video,
+canvas,
+svgimg,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1;
+}
+
+/* utilities */
+
+.visually-hidden:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/* general */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--ff-open_sans);
+}
+
+main {
+  background-color: var(--clr-violet);
+  background-image: url(./images/bg-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  max-height: 100vh;
+  width: 500px;
+  padding: 2.75rem 3.25rem;
+}
+
+.logo {
+  width: 40%;
+  margin-bottom: .25rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.card__img {
+  margin: 5rem 0;
+}
+
+.card__content {
+  font-family: var(--ff-poppins);
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding-bottom: 50px;
+}
+
+.content__title {
+  font-weight: 600;
+  letter-spacing: 0.01rem;
+  font-size: 2rem;
+  line-height: 3rem;
+}
+
+.content__desc {
+  font-weight: 300;
+  font-size: 1.215rem;
+}
+
+.card__social {
+  display: flex;
+  justify-content: center;
+}
+
+.content__btn {
+  border: none;
+  border-radius: 25px;
+  padding: 12px;
+  /* shadow */
+}
+
+.social-icon-box {
+  width: 15;
+  font-size: 1rem;
+  padding: .375rem;
+  border-style: solid;
+  border-width: 0.1rem;
+  border-radius: 50%;
+  color: white;
+}
+
+.social-icon {
+  color: white;
+}
+
+footer {
+  margin: 0;
+  background-color: var(--clr-violet);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
