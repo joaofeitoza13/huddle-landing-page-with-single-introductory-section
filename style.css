@@ -110,8 +110,8 @@ main {
   text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
-  padding-bottom: 50px;
+  gap: 1.15rem;
+  margin-bottom: 0.75rem;
 }
 
 .content__title {
@@ -125,11 +125,13 @@ main {
   font-weight: 300;
   font-size: 1.225rem;
   margin-bottom: 1.35rem;
+  line-height: 1.925rem;
 }
 
 .content__btn {
   border: none;
   border-radius: 50px;
+  background-color: white;
   box-shadow: rgba(0, 0, 0, .40) 0px 3px 8px;
   padding: 17px 0px 15px 0px;
   margin: 0px 60px;
@@ -146,8 +148,8 @@ main {
 .card__social {
   display: flex;
   justify-content: center;
-  gap: 0.825rem;
-  padding-top: 2rem;
+  margin-top: 4rem;
+  column-gap: 0.825rem;
 } 
 
 .social-icon-box {
@@ -181,64 +183,78 @@ footer {
 }
 
 @media screen and (min-width: 501px) {
-  * {
-    margin: unset;
-    padding: unset;
-  }
-
   main {
-    display: flex;
-    flex-direction: column;
-    max-height: 100vh;
+    height: 100vh;
     width: 100vw;
+    max-width: 1440px;
+    max-height: 800px;
     background-image: url(./images/bg-desktop.svg);
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 2.75rem 3.25rem 4rem 3.25rem;
+    padding: 2.25rem 3.325rem 1.675rem 3rem;
   }
 
   .logo {
-    grid-area: one;
-    width: 20%;
+    width: 140px;
+    margin-bottom: 3.625rem;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
   }
 
   .card__img {
-    grid-area: two;
+    width: 82rem;
+    max-width: 82rem;
+    margin: 0px;
   }
 
   .card__content {
-    padding: 120px 0px 30px 0px;
-    grid-area: three;
+    padding-left: 2.5rem;
+    padding-top: 2rem;
     text-align: left;
-    font-size: 1rem;
+    font-size: 0.5rem;
+    gap: 0.875rem
+  }
+
+  .content__title {
+    font-size: 1.725rem;
+    line-height: 2.475rem;
   }
 
   .content__desc {
-    font-size: 0.975rem;
+    font-size: .6925rem;
+    line-height: 1.15rem;
+    margin-bottom: .1rem;
   }
 
   .card__social {
     padding: 0px;
-    grid-area: four;
+    margin-top: 0px;
     justify-content: end;
     align-items: center;
   }
 
-  .card {
-    display: grid;
-    column-gap: 2.5rem;
-    grid-template-columns: 1.15fr .85fr;
-    grid-template-areas: 
-      'one one'
-      'two three'
-      'two three'
-      'four four'
-    ;
+  .content__btn {
+    width: 125px;
+    font-size: .795rem;
+    margin-left: 0px;
+    padding: 9px 0px;
   }
 
-  .content__btn {
-    width: 175px;
-    padding: 12px 0px;
-    margin-left: 0px;
+  .social-icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.675rem;
+    height: 1.675rem;
+    font-size: 0.8225rem;
+    border-style: solid;
+    border-width: 0.0833rem;
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
   }
 }
